@@ -8,7 +8,7 @@
 This library provides convenient access to the [Queensland Fire and Emergency Services (QFES) Bushfire Alert Feed](https://www.ruralfire.qld.gov.au/map/Pages/default.aspx).
 
 ## Installation
-`pip install georss-wa-dfes-client`
+`pip install georss-qfes-bushfire-alert-client`
 
 ## Usage
 See below for an example of how this library can be used. After instantiating 
