@@ -41,8 +41,25 @@ feed = QfesBushfireAlertFeed((-27.5, 153.0),
 status, entries = feed.update()
 ```
 
-## Feed Manager
+## Feed entry properties
+Each feed entry is populated with the following properties - subject to 
+availabiliy in GeoRSS feed:
 
+| Name             | Description                                               |
+|------------------|-----------------------------------------------------------|
+| geometry         | All geometry details of this entry.                       |
+| coordinates      | Best coordinates (latitude, longitude) of this entry.     |
+| external_id      | External id of this entry.                                |
+| title            | Title of this entry with textual description of location. |
+| category         | Category of this entry.                                   |
+| attribution      | Attribution from feed.                                    |
+| distance_to_home | Distance in km of this entry to the home coordinates.     |
+| description      | Full content of this entry.                               |
+| published        | Published date of this entry.                             |
+| updated          | Updated date of this entry.                               |
+| status           | Status of alert, e.g. "Patrolled", "Going", "Contained"   |
+
+## Feed Manager
 The Feed Manager helps managing feed updates over time, by notifying the 
 consumer of the feed about new feed entries, updates and removed entries 
 compared to the last feed update.
