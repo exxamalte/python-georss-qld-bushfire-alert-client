@@ -43,7 +43,7 @@ status, entries = feed.update()
 
 ## Feed entry properties
 Each feed entry is populated with the following properties - subject to 
-availabiliy in GeoRSS feed:
+availability in GeoRSS feed:
 
 | Name             | Description                                               |
 |------------------|-----------------------------------------------------------|
