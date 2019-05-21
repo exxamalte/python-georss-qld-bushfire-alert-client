@@ -1,14 +1,14 @@
-# python-georss-qfes-bushfire-alert-client
+# python-georss-qld-bushfire-alert-client
 
-[![Build Status](https://travis-ci.org/exxamalte/python-georss-qfes-bushfire-alert-client.svg)](https://travis-ci.org/exxamalte/python-georss-qfes-bushfire-alert-client)
-[![Coverage Status](https://coveralls.io/repos/github/exxamalte/python-georss-qfes-bushfire-alert-client/badge.svg?branch=master)](https://coveralls.io/github/exxamalte/python-georss-qfes-bushfire-alert-client?branch=master)
-[![PyPi](https://img.shields.io/pypi/v/georss-qfes-bushfire-alert-client.svg)](https://pypi.python.org/pypi/georss-qfes-bushfire-alert-client)
-[![Version](https://img.shields.io/pypi/pyversions/georss-qfes-bushfire-alert-client.svg)](https://pypi.python.org/pypi/georss-qfes-bushfire-alert-client)
+[![Build Status](https://travis-ci.org/exxamalte/python-georss-qld-bushfire-alert-client.svg)](https://travis-ci.org/exxamalte/python-georss-qld-bushfire-alert-client)
+[![Coverage Status](https://coveralls.io/repos/github/exxamalte/python-georss-qld-bushfire-alert-client/badge.svg?branch=master)](https://coveralls.io/github/exxamalte/python-georss-qld-bushfire-alert-client?branch=master)
+[![PyPi](https://img.shields.io/pypi/v/georss-qld-bushfire-alert-client.svg)](https://pypi.python.org/pypi/georss-qld-bushfire-alert-client)
+[![Version](https://img.shields.io/pypi/pyversions/georss-qld-bushfire-alert-client.svg)](https://pypi.python.org/pypi/georss-qld-bushfire-alert-client)
 
-This library provides convenient access to the [Queensland Fire and Emergency Services (QFES) Bushfire Alert Feed](https://www.ruralfire.qld.gov.au/map/Pages/default.aspx).
+This library provides convenient access to the [Queensland Bushfire Alert Feed](https://www.ruralfire.qld.gov.au/map/Pages/default.aspx).
 
 ## Installation
-`pip install georss-qfes-bushfire-alert-client`
+`pip install georss-qld-bushfire-alert-client`
 
 ## Usage
 See below for an example of how this library can be used. After instantiating 
@@ -31,13 +31,13 @@ the actual data in the form of a list of specific feed entries.
 
 **Example**
 ```python
-from georss_qfes_bushfire_alert_client import QfesBushfireAlertFeed
+from georss_qld_bushfire_alert_client import QldBushfireAlertFeed
 # Home Coordinates: Latitude: -27.5, Longitude: 153.0
 # Filter radius: 50 km
 # Filter categories: 'Advice'
-feed = QfesBushfireAlertFeed((-27.5, 153.0), 
-                             filter_radius=50, 
-                             filter_categories=['Advice'])
+feed = QldBushfireAlertFeed((-27.5, 153.0), 
+                            filter_radius=50, 
+                            filter_categories=['Advice'])
 status, entries = feed.update()
 ```
 

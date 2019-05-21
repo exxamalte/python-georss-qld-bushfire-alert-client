@@ -8,14 +8,14 @@ REQUIRES = [
 ]
 
 setup(
-    name="georss_qfes_bushfire_alert_client",
+    name="georss_qld_bushfire_alert_client",
     version="0.2",
     author="Malte Franken",
     author_email="coding@subspace.de",
-    description="A GeoRSS client library for the Queensland Fire and Emergency Services (QFES) Bushfire Alert feed.",
+    description="A GeoRSS client library for the Queensland Bushfire Alert feed.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/exxamalte/python-georss-qfes-bushfire-alert-client",
+    url="https://github.com/exxamalte/python-georss-qld-bushfire-alert-client",
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3.6",

@@ -1,4 +1,4 @@
-"""Tests for georss-qfes-bushfire-alert-client library."""
+"""Tests for georss-qld-bushfire-alert-client library."""
 import os
 
 
