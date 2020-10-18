@@ -1,5 +1,10 @@
 # Changes
 
+## 0.4 (18/10/2020)
+* Added Python 3.8 support.
+* Excluded tests from package.
+* Added missing category "Information" to list of valid categories.
+
 ## 0.3 (21/05/2019)
 * Renamed library and removed all occurrences of legally protected names.
 
