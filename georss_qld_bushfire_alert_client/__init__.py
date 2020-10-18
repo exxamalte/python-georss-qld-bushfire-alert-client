@@ -13,7 +13,7 @@ REGEXP_ATTR_STATUS = 'Current Status: (?P<{}>[^<]+)[\n\r]'\
 URL = "https://www.qfes.qld.gov.au/data/alerts/bushfireAlert.xml"
 
 VALID_CATEGORIES = ['Emergency Warning', 'Watch and Act', 'Advice',
-                    'Notification']
+                    'Notification', 'Information']
 
 
 class QldBushfireAlertFeedManager(FeedManagerBase):
