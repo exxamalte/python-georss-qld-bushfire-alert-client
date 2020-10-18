@@ -16,7 +16,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/exxamalte/python-georss-qld-bushfire-alert-client",
-    packages=find_packages(exclude=("tests",)),
+    packages=find_packages(exclude=("tests*",)),
     classifiers=[
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
