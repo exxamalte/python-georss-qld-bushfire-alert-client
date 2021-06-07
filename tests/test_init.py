@@ -4,6 +4,7 @@ import unittest
 from unittest import mock
 
 from georss_client import UPDATE_OK
+
 from georss_qld_bushfire_alert_client import (
     QldBushfireAlertFeed,
     QldBushfireAlertFeedManager,
