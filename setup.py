@@ -13,6 +13,7 @@ setup(
     author="Malte Franken",
     author_email="coding@subspace.de",
     description="A GeoRSS client library for the Queensland Bushfire Alert feed.",
+    license="Apache-2.0",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/exxamalte/python-georss-qld-bushfire-alert-client",
