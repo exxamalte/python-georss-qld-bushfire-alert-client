@@ -4,8 +4,10 @@ import unittest
 from unittest import mock
 
 from georss_client import UPDATE_OK
-from georss_qld_bushfire_alert_client import \
-    QldBushfireAlertFeed, QldBushfireAlertFeedManager
+from georss_qld_bushfire_alert_client import (
+    QldBushfireAlertFeed,
+    QldBushfireAlertFeedManager,
+)
 from tests import load_fixture
 
 HOME_COORDINATES = (-31.0, 151.0)
@@ -18,17 +20,18 @@ class TestQldBushfireAlertFeed(unittest.TestCase):
     @mock.patch("requests.Session")
     def test_update_ok(self, mock_session, mock_request):
         """Test updating feed is ok."""
-        mock_session.return_value.__enter__.return_value.send\
-            .return_value.ok = True
-        mock_session.return_value.__enter__.return_value.send\
-            .return_value.text = \
-            load_fixture('qld_bushfire_alert_feed.xml')
+        mock_session.return_value.__enter__.return_value.send.return_value.ok = True
+        mock_session.return_value.__enter__.return_value.send.return_value.text = (
+            load_fixture("qld_bushfire_alert_feed.xml")
+        )
 
         feed = QldBushfireAlertFeed(HOME_COORDINATES)
-        assert repr(feed) == "<QldBushfireAlertFeed(home=(-31.0, 151.0), " \
-                             "url=https://www.qfes.qld.gov.au/data/alerts/" \
-                             "bushfireAlert.xml, radius=None, categories=" \
-                             "None)>"
+        assert (
+            repr(feed) == "<QldBushfireAlertFeed(home=(-31.0, 151.0), "
+            "url=https://www.qfes.qld.gov.au/data/alerts/"
+            "bushfireAlert.xml, radius=None, categories="
+            "None)>"
+        )
         status, entries = feed.update()
         assert status == UPDATE_OK
         self.assertIsNotNone(entries)
@@ -54,15 +57,12 @@ class TestQldBushfireAlertFeed(unittest.TestCase):
     @mock.patch("requests.Session")
     def test_update_ok_with_category(self, mock_session, mock_request):
         """Test updating feed is ok."""
-        mock_session.return_value.__enter__.return_value.send\
-            .return_value.ok = True
-        mock_session.return_value.__enter__.return_value.send\
-            .return_value.text = \
-            load_fixture('qld_bushfire_alert_feed.xml')
+        mock_session.return_value.__enter__.return_value.send.return_value.ok = True
+        mock_session.return_value.__enter__.return_value.send.return_value.text = (
+            load_fixture("qld_bushfire_alert_feed.xml")
+        )
 
-        feed = QldBushfireAlertFeed(
-            HOME_COORDINATES,
-            filter_categories=['Category 1'])
+        feed = QldBushfireAlertFeed(HOME_COORDINATES, filter_categories=["Category 1"])
         status, entries = feed.update()
         assert status == UPDATE_OK
         self.assertIsNotNone(entries)
@@ -76,11 +76,10 @@ class TestQldBushfireAlertFeed(unittest.TestCase):
     @mock.patch("requests.Session")
     def test_feed_manager(self, mock_session, mock_request):
         """Test the feed manager."""
-        mock_session.return_value.__enter__.return_value.send\
-            .return_value.ok = True
-        mock_session.return_value.__enter__.return_value.send\
-            .return_value.text = load_fixture(
-                'qld_bushfire_alert_feed.xml')
+        mock_session.return_value.__enter__.return_value.send.return_value.ok = True
+        mock_session.return_value.__enter__.return_value.send.return_value.text = (
+            load_fixture("qld_bushfire_alert_feed.xml")
+        )
 
         # This will just record calls and keep track of external ids.
         generated_entity_external_ids = []
@@ -100,22 +99,21 @@ class TestQldBushfireAlertFeed(unittest.TestCase):
             removed_entity_external_ids.append(external_id)
 
         feed_manager = QldBushfireAlertFeedManager(
-            _generate_entity,
-            _update_entity,
-            _remove_entity,
-            HOME_COORDINATES)
-        assert repr(feed_manager) == "<QldBushfireAlertFeedManager(" \
-                                     "feed=<QldBushfireAlertFeed(home=" \
-                                     "(-31.0, 151.0), url=https://www." \
-                                     "qfes.qld.gov.au/data/alerts/" \
-                                     "bushfireAlert.xml, " \
-                                     "radius=None, categories=None)>)>"
+            _generate_entity, _update_entity, _remove_entity, HOME_COORDINATES
+        )
+        assert (
+            repr(feed_manager) == "<QldBushfireAlertFeedManager("
+            "feed=<QldBushfireAlertFeed(home="
+            "(-31.0, 151.0), url=https://www."
+            "qfes.qld.gov.au/data/alerts/"
+            "bushfireAlert.xml, "
+            "radius=None, categories=None)>)>"
+        )
         feed_manager.update()
         entries = feed_manager.feed_entries
         self.assertIsNotNone(entries)
         assert len(entries) == 2
-        assert feed_manager.last_timestamp \
-            == datetime.datetime(2018, 9, 27, 8, 0)
+        assert feed_manager.last_timestamp == datetime.datetime(2018, 9, 27, 8, 0)
         assert len(generated_entity_external_ids) == 2
         assert len(updated_entity_external_ids) == 0
         assert len(removed_entity_external_ids) == 0
