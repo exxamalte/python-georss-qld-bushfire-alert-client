@@ -1,5 +1,11 @@
 # Changes
 
+## 0.5 (07/06/2021)
+* Add license tag (thanks @fabaff).
+* Bump georss_client to v0.13.
+* Added Python 3.9 support.
+* General code improvements.
+
 ## 0.4 (18/10/2020)
 * Added Python 3.8 support.
 * Excluded tests from package.

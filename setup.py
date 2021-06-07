@@ -1,15 +1,15 @@
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 REQUIRES = [
-    'georss_client>=0.13',
+    "georss_client>=0.13",
 ]
 
 setup(
     name="georss_qld_bushfire_alert_client",
-    version="0.4",
+    version="0.5",
     author="Malte Franken",
     author_email="coding@subspace.de",
     description="A GeoRSS client library for the Queensland Bushfire Alert feed.",
@@ -26,5 +26,5 @@ setup(
         "License :: OSI Approved :: Apache Software License",
         "Operating System :: OS Independent",
     ],
-    install_requires=REQUIRES
+    install_requires=REQUIRES,
 )
