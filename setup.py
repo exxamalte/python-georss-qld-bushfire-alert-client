@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 REQUIRES = [
-    "georss_client>=0.13",
+    "georss_client>=0.15",
 ]
 
 setup(
