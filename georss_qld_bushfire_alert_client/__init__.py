@@ -1,13 +1,9 @@
-"""
-Queensland Bushfire Alert Feed.
-
-Fetches GeoRSS feed from Queensland Bushfire Alert Feed.
-"""
+"""Queensland Bushfire Alert Feed. Fetches GeoRSS feed from Queensland Bushfire Alert Feed."""
 from georss_client import ATTR_ATTRIBUTION, FeedEntry, GeoRssFeed
 from georss_client.consts import CUSTOM_ATTRIBUTE
 from georss_client.feed_manager import FeedManagerBase
 
-REGEXP_ATTR_STATUS = "Current Status: (?P<{}>[^<]+)[\n\r]".format(CUSTOM_ATTRIBUTE)
+REGEXP_ATTR_STATUS = f"Current Status: (?P<{CUSTOM_ATTRIBUTE}>[^<]+)[\n\r]"
 
 URL = "https://www.qfes.qld.gov.au/data/alerts/bushfireAlert.xml"
 
