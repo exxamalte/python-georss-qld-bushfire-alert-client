@@ -8,7 +8,7 @@ REGEXP_ATTR_STATUS = f"Current Status: (?P<{CUSTOM_ATTRIBUTE}>[^<]+)[\n\r]"
 class QldBushfireAlertFeedEntry(FeedEntry):
     """Qld Bushfire Alert feed entry."""
 
-    def __init__(self, home_coordinates, rss_entry, attribution):
+    def __init__(self, home_coordinates: tuple[float, float], rss_entry, attribution):
         """Initialise this service."""
         super().__init__(home_coordinates, rss_entry)
         self._attribution = attribution
