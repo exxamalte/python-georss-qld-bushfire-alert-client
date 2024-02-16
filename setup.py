@@ -10,7 +10,7 @@ DESCRIPTION = "A GeoRSS client library for the Queensland Bushfire Alert feed."
 URL = "https://github.com/exxamalte/python-georss-qld-bushfire-alert-client"
 
 REQUIRES = [
-    "georss_client>=0.15",
+    "georss_client>=0.17",
 ]
 
 with open("README.md") as fh:
