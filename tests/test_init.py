@@ -5,10 +5,8 @@ from unittest import mock
 
 from georss_client import UPDATE_OK
 
-from georss_qld_bushfire_alert_client import (
-    QldBushfireAlertFeed,
-    QldBushfireAlertFeedManager,
-)
+from georss_qld_bushfire_alert_client import QldBushfireAlertFeed
+from georss_qld_bushfire_alert_client.feed_manager import QldBushfireAlertFeedManager
 from tests import load_fixture
 
 HOME_COORDINATES = (-31.0, 151.0)
