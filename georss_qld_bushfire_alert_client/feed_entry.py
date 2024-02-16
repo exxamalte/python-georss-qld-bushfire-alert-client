@@ -1,4 +1,6 @@
 """Queensland Bushfire Alert feed entry."""
+from __future__ import annotations
+
 from georss_client.consts import CUSTOM_ATTRIBUTE
 from georss_client.feed_entry import FeedEntry
 
