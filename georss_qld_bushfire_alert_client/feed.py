@@ -8,7 +8,8 @@ from georss_client.feed import GeoRssFeed
 
 from .feed_entry import QldBushfireAlertFeedEntry
 
-URL: Final = "https://www.qfes.qld.gov.au/data/alerts/bushfireAlert.xml"
+# URL as published here: https://www.fire.qld.gov.au/Current-Incidents
+URL: Final = "https://publiccontent-gis-psba-qld-gov-au.s3.amazonaws.com/content/Feeds/BushfireCurrentIncidents/bushfireAlert.xml"
 
 
 class QldBushfireAlertFeed(GeoRssFeed):
