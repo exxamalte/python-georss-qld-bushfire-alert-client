@@ -1,5 +1,9 @@
 # Changes
 
+## 0.8 (14/07/2024)
+* Updated feed URL to the officially published URL.
+* Removed black, isort and flake8 in favour of only using ruff.
+
 ## 0.7 (21/02/2024)
 * Bumped version of upstream [python-georss-client](https://github.com/exxamalte/python-georss-client) library to v0.17 that fixes a backwards compatibility issue with a fault in v0.16.
 * Added Python 3.11 support.
