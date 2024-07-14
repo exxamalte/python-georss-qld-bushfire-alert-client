@@ -40,9 +40,8 @@ def test_feed_manager(mock_session, mock_request):
     assert (
         repr(feed_manager) == "<QldBushfireAlertFeedManager("
         "feed=<QldBushfireAlertFeed(home="
-        "(-31.0, 151.0), url=https://www."
-        "qfes.qld.gov.au/data/alerts/"
-        "bushfireAlert.xml, "
+        "(-31.0, 151.0), url=https://publiccontent-gis-psba-qld-gov-au.s3.amazonaws.com/"
+        "content/Feeds/BushfireCurrentIncidents/bushfireAlert.xml, "
         "radius=None, categories=None)>)>"
     )
     feed_manager.update()

@@ -23,8 +23,8 @@ def test_update_ok(mock_session, mock_request):
     feed = QldBushfireAlertFeed(HOME_COORDINATES)
     assert (
         repr(feed) == "<QldBushfireAlertFeed(home=(-31.0, 151.0), "
-        "url=https://www.qfes.qld.gov.au/data/alerts/"
-        "bushfireAlert.xml, radius=None, categories="
+        "url=https://publiccontent-gis-psba-qld-gov-au.s3.amazonaws.com/content/"
+        "Feeds/BushfireCurrentIncidents/bushfireAlert.xml, radius=None, categories="
         "None)>"
     )
     status, entries = feed.update()
