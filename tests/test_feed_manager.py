@@ -1,4 +1,5 @@
 """Test for the Queensland Bushfire Alert feed manager."""
+
 import datetime
 from unittest import mock
 

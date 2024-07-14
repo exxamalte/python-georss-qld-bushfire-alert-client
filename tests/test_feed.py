@@ -1,9 +1,10 @@
 """Test for the Queensland Bushfire Alert feed."""
+
 import datetime
 from unittest import mock
 
-import pytest
 from georss_client import UPDATE_OK
+import pytest
 
 from georss_qld_bushfire_alert_client.feed import QldBushfireAlertFeed
 from tests.utils import load_fixture
