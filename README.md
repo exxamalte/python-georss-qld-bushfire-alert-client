@@ -1,6 +1,6 @@
 # python-georss-qld-bushfire-alert-client
 
-[![Build Status](https://github.com/exxamalte/python-georss-qld-bushfire-alert-client/actions/workflows/ci.yaml/badge.svg?branch=master)](https://github.com/exxamalte/python-georss-qld-bushfire-alert-client/actions?workflow=CI)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/exxamalte/python-georss-qld-bushfire-alert-client/ci.yaml)](https://github.com/exxamalte/python-georss-qld-bushfire-alert-client/actions/workflows/ci.yaml)
 [![codecov](https://codecov.io/gh/exxamalte/python-georss-qld-bushfire-alert-client/branch/master/graph/badge.svg?token=0YWR76U4GN)](https://codecov.io/gh/exxamalte/python-georss-qld-bushfire-alert-client)
 [![PyPi](https://img.shields.io/pypi/v/georss-qld-bushfire-alert-client.svg)](https://pypi.python.org/pypi/georss-qld-bushfire-alert-client)
 [![Version](https://img.shields.io/pypi/pyversions/georss-qld-bushfire-alert-client.svg)](https://pypi.python.org/pypi/georss-qld-bushfire-alert-client)
