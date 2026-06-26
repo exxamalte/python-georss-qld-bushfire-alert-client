@@ -1,5 +1,16 @@
 # Changes
 
+## 2026.6.0 (26/06/2026)
+* Added Python 3.13 support.
+* Added Python 3.14 support.
+* Removed Python 3.8 support.
+* Removed Python 3.9 support.
+* Removed Python 3.10 support.
+* Bump georss_client to 2026.6.1
+* Bump ruff to 0.15.20
+* Code quality improvements.
+* Changing to date-based versioning
+
 ## 0.8 (14/07/2024)
 * Updated feed URL to the officially published URL.
 * Removed black, isort and flake8 in favour of only using ruff.
